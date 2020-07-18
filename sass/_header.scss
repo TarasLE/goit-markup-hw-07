@@ -1,0 +1,131 @@
+.site-auth {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  & .link {
+    color: $--primary-text-color;
+  }
+
+  &.flex-type :not(:first-child) {
+    padding-left: 30px;
+  }
+
+  &.flex-type {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 0;
+    margin-left: auto;
+    align-items: center;
+  }
+}
+
+.site-nav {
+  padding-left: 0;
+  margin-left: 84px;
+  @extend %nav-style;
+
+  & .flex-type {
+    align-items: center;
+  }
+
+  & .link {
+    display: flex;
+    height: 100%;
+    position: relative;
+    color: $--primary-text-color;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $--text-accent-color;
+    transform: scale(0);
+  }
+
+  & .link:hover:after {
+    transform: scale(1);
+    transition: transform 250ms $timing-function;
+  }
+
+  &.flex-type :not(:first-child) {
+    padding-left: 50px;
+  }
+}
+
+.logo {
+  color: $--primary-logo-color;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  font-family: $font-family-logo;
+
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  //   transition-property: color;
+  //   transition-duration: 250ms;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms $timing-function;
+
+  .page-header &:hover,
+  .page-header &:focus {
+    color: $--text-accent-color;
+  }
+}
+
+.logo-colored {
+  color: $--text-accent-color;
+}
+
+.current-page {
+  color: $--text-accent-color;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $--text-accent-color;
+  }
+}
+
+.text {
+  .site-auth & {
+    line-height: 1.14;
+  }
+}
+
+.icon-mail {
+  width: 16px;
+  height: 11.2px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-vector {
+  width: 10px;
+  height: 14.92px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.link:hover,
+.link:focus {
+  color: $--text-accent-color;
+}
