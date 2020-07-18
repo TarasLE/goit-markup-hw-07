@@ -341,6 +341,16 @@ template {
   display: none;
 }
 
+.advantage, .duties, .team {
+  display: block;
+  text-align: center;
+  margin-top: 94px;
+}
+
+.advantage-card:not(:first-child), .duties .duties-card:not(:first-child), .team-card:not(:first-child) {
+  margin-left: 30px;
+}
+
 ul {
   list-style: none;
 }
@@ -351,14 +361,23 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.text {
+.advantage .text, .team .text {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.site-nav {
+.advantage .subtitle, .duties .subtitle, .team .subtitle {
+  color: #212121;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.site-auth, .site-nav {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -368,14 +387,31 @@ ul {
   margin-top: 0;
 }
 
-.site-auth {
+.duties .title, .team .title {
+  color: #212121;
   font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.hero-button {
+  color: #ffffff;
+  background-color: #2196f3;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 32px;
+  border-radius: 4px;
   margin-top: 0;
+  margin-bottom: 200px;
 }
 
 .site-auth .link {
@@ -509,6 +545,35 @@ ul {
   color: #2196f3;
 }
 
+.hero-container {
+  max-width: 1600px;
+  display: block;
+  text-align: center;
+  background-color: #757575;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../img/Header.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../img/Header.jpg);
+}
+
+.hero-title {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-top: 200px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.hero-button:hover, .hero-button:focus {
+  color: #212121;
+  outline: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -556,5 +621,172 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.advantage .container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.icon-advantage {
+  display: block;
+  height: 70px;
+  width: 70px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-radius: 4px;
+}
+
+.advantage-card {
+  width: calc((100% -120px) / 4);
+  text-align: left;
+}
+
+.advantage-card .icon-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f5f4fa;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.duties .title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.duties .subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  width: inherit;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.duties .duties-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 294px;
+  width: 370px;
+  position: relative;
+}
+
+.duties .duties-card.desktop {
+  background-image: url(../img/laptop.jpg);
+}
+
+.duties .duties-card.mobile {
+  background-image: url(../img/phone.jpg);
+}
+
+.duties .duties-card.design {
+  background-image: url(../img/display.jpg);
+}
+
+.team {
+  background-color: #f5f4fa;
+}
+
+.team .container {
+  padding-bottom: 94px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #f5f4fa;
+}
+
+.team .title {
+  display: inline-block;
+  margin-top: 94px;
+}
+
+.team .text {
+  font-size: 16px;
+  line-height: 1.19;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.team .subtitle {
+  color: #212121;
+  font-style: normal;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.team-card {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-card .flex-type {
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 24px;
+}
+
+
+.team-card .connect .shell {
+  display: block;
+  margin-right: 10px;
+}
+
+.team-card .shell:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.social-block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-block:hover, .social-block:focus {
+  background-color: #2196f3;
+}
+
+.social-block:hover .social-link,
+.social-block:focus .social-link {
+  fill: #ffffff;
+}
+
+.social-link {
+  display: block;
+  height: 20px;
+  width: 20px;
+  fill: #afb1b8;
 }
 /*# sourceMappingURL=main.css.map */

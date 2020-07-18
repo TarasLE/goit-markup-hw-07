@@ -1,8 +1,12 @@
 @import "./normalize";
 @import "./variables";
-@import "./ul";
-@import "./link";
-@import "./textStyles";
+@import "./utilities/block-charact";
+@import "./utilities/ul";
+@import "./utilities/link";
+@import "./utilities/textStyles";
+@import "./utilities/buttons";
 
-@import "./header";
-@import "./body";
+@import "./index.html/header";
+@import "./index.html/hero";
+@import "./index.html/body";
+@import "./index.html/footer";

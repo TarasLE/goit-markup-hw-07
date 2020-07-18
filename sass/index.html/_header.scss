@@ -1,11 +1,5 @@
 .site-auth {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  margin-bottom: 0;
-  margin-top: 0;
+  @extend %nav-style;
 
   & .link {
     color: $--primary-text-color;
