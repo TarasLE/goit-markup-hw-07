@@ -199,13 +199,7 @@ body {
 }
 
 .social-block {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 44px;
-  width: 44px;
-  border-radius: 50%;
-  transition: background-color 250ms $timing-function;
+  @extend %social-block-style;
 
   &:hover,
   &:focus {
@@ -219,8 +213,298 @@ body {
 }
 
 .social-link {
-  display: block;
-  height: 20px;
-  width: 20px;
-  fill: $--primary-icon-color;
+  @extend %social-link-style;
+}
+
+//-------------CLIENTS-BLOCK------------//
+.clients {
+  @extend %block-state;
+
+  & .title {
+    @extend %title-style;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  & .logo-1 {
+    height: 49.23px;
+    width: 44.27px;
+    @extend %clients-logo-transition;
+  }
+
+  & .logo-2 {
+    height: 52px;
+    width: 40px;
+    @extend %clients-logo-transition;
+  }
+
+  & .logo-3 {
+    height: 42.6px;
+    width: 41px;
+    @extend %clients-logo-transition;
+  }
+
+  & .logo-4 {
+    height: 42.02px;
+    width: 79.66 / px;
+    @extend %clients-logo-transition;
+  }
+
+  & .logo-5 {
+    height: 47px;
+    width: 59px;
+    @extend %clients-logo-transition;
+  }
+
+  & .logo-6 {
+    height: 45.44px;
+    width: 88.48px;
+    @extend %clients-logo-transition;
+  }
+}
+
+.clients-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid $--primary-icon-color;
+  border-radius: 4px;
+
+  // transition-property: border;
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms $timing-function;
+
+  &:not(:first-child) {
+    @extend %card-interim-margin;
+  }
+
+  &:hover {
+    border: 1px solid $--text-accent-color;
+  }
+
+  &:hover .logo-1,
+  &:hover .logo-2,
+  &:hover .logo-3,
+  &:hover .logo-4,
+  &:hover .logo-5,
+  &:hover .logo-6 {
+    fill: $--text-accent-color;
+  }
+}
+
+//-------------MODAL-BLOCK------------//
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $--background-color-backdrop;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 250ms $timing-function;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-hidden .modal {
+    transform: translate(-50%) scale(0);
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%) scale(1);
+  transition: transform 250ms $timing-function;
+  width: 448px;
+  height: 501px;
+  padding: 40px;
+  background-color: $--primary-white-color;
+
+  & .title {
+    font-size: 20px;
+    line-height: 1.15;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  &:nth-last-child(1) {
+    margin-bottom: 25px;
+  }
+
+  & input {
+    height: 36px;
+  }
+
+  & :focus {
+    border: transparent;
+    outline: transparent;
+    border: solid 1px $--text-accent-color;
+    border-radius: 4px;
+  }
+}
+
+.form-lable {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  color: $--primary-text-color;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.01em;
+  transition: transform 250ms linear;
+}
+
+.form-input {
+  padding-left: 42px;
+  border: 1px solid $--form-border-input;
+  border-radius: 4px;
+
+  &:focus + .form-lable,
+  &:not(:placeholder-shown) + .form-lable {
+    color: $--text-accent-color;
+    transform: translate(-23px, -34px);
+  }
+
+  &:focus ~ .icon-formbox {
+    fill: $--text-accent-color;
+  }
+}
+
+.icon-formbox {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: $--text-title-color;
+}
+
+.comment-lable {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  color: $--primary-text-color;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.01em;
+  transition: transform 250ms linear;
+}
+
+.input-comments {
+  position: relative;
+  height: 116px;
+  resize: none;
+  border: 1px solid $--form-border-input;
+  border-radius: 4px;
+
+  &:focus + .comment-lable,
+  &:not(:placeholder-shown) + .comment-lable {
+    color: $--text-accent-color;
+    transform: translateY(-34px);
+  }
+}
+
+.contract-conditions {
+  color: $--text-accent-color;
+  margin-left: 5px;
+}
+
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: $--primary-white-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-8px, 8px);
+
+  &:hover,
+  &:focus {
+    fill: $--text-accent-color;
+  }
+}
+
+.icon-close {
+  height: 18px;
+  width: 18px;
+}
+
+.form-conditions {
+  margin-bottom: 30px;
+
+  & .checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+.policy-lable {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.icon-checked {
+  display: flex;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $--text-title-color;
+  margin-right: 8.5px;
+  margin-left: 12px;
+}
+
+.checkbox:checked + .icon-checked {
+  border: 2px solid $--text-accent-color;
+  background-color: $--text-accent-color;
+  background-image: url("../img/icon_check.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox:focus + .icon-checked {
+  border: 2px solid $--text-accent-color;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+
+.accept-button {
+  @extend %button-style;
+
+  &:hover,
+  &:focus {
+    color: $--text-title-color;
+    outline: none;
+  }
 }

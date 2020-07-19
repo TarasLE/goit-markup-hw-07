@@ -48,7 +48,8 @@
     transform: scale(0);
   }
 
-  & .link:hover:after {
+  & .link:hover:after,
+  .link:focus:after {
     transform: scale(1);
     transition: transform 250ms $timing-function;
   }
@@ -65,14 +66,9 @@
   font-size: 26px;
   line-height: 1.19;
   font-family: $font-family-logo;
-
   display: inline-block;
   padding-top: 24px;
   padding-bottom: 25px;
-
-  //   transition-property: color;
-  //   transition-duration: 250ms;
-  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms $timing-function;
 
   .page-header &:hover,
