@@ -1,11 +1,11 @@
-%text-style {
+.text {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 }
 
-%subtitle-style {
+.subtitle {
   color: $--text-title-color;
   font-style: normal;
   font-weight: 700;
@@ -24,7 +24,7 @@
   margin-top: 0;
 }
 
-%title-style {
+.title {
   color: $--text-title-color;
   font-style: normal;
   font-weight: 700;

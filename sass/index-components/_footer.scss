@@ -24,7 +24,6 @@
   display: block;
 
   .text {
-    @extend %text-style;
     width: max-content;
     color: $--primary-white-color;
   }
@@ -62,12 +61,7 @@
 .connect {
   margin-right: 94px;
 
-  & .shell {
-    @extend %shell-style;
-  }
-
   & .subtitle {
-    @extend %subtitle-style;
     color: $--primary-white-color;
     display: block;
     padding: 0;
@@ -102,7 +96,6 @@
   min-width: 500px;
 
   .subtitle {
-    @extend %subtitle-style;
     color: $--primary-white-color;
     display: block;
     padding: 0;

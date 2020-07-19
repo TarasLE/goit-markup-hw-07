@@ -341,6 +341,54 @@ template {
   display: none;
 }
 
+body {
+  background-color: #ffffff;
+  color: #757575;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.flex-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-type .link {
+  display: inline-flexbox;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .advantage, .duties, .team, .clients, .portfolio {
   display: block;
   text-align: center;
@@ -351,7 +399,7 @@ template {
   margin-left: 30px;
 }
 
-.connect .shell {
+.shell {
   display: block;
   margin-right: 10px;
 }
@@ -400,14 +448,14 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.advantage .text, .team .text, .location .text, .portfolio-buttons.text, .features .text, .portfolio-card .text {
+.text {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.advantage .subtitle, .duties .subtitle, .team .subtitle, .connect .subtitle, .subscribe .subtitle, .features .subtitle, .portfolio-card .subtitle {
+.subtitle {
   color: #212121;
   font-style: normal;
   font-weight: 700;
@@ -426,7 +474,7 @@ ul {
   margin-top: 0;
 }
 
-.duties .title, .team .title, .clients .title {
+.title {
   color: #212121;
   font-style: normal;
   font-weight: 700;
@@ -457,10 +505,6 @@ ul {
   color: #757575;
 }
 
-.site-auth.flex-type :not(:first-child) {
-  padding-left: 30px;
-}
-
 .site-auth.flex-type {
   margin-top: auto;
   margin-bottom: auto;
@@ -469,6 +513,14 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.site-auth.flex-type :not(:first-child) {
+  padding-left: 30px;
+}
+
+.site-auth .text {
+  line-height: 1.14;
 }
 
 .site-nav {
@@ -480,6 +532,10 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.site-nav.flex-type :not(:first-child) {
+  padding-left: 50px;
 }
 
 .site-nav .link {
@@ -520,10 +576,6 @@ ul {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav.flex-type :not(:first-child) {
-  padding-left: 50px;
-}
-
 .logo {
   color: #000;
   font-style: normal;
@@ -559,10 +611,6 @@ ul {
   width: 100%;
   border-radius: 2px;
   background-color: #2196f3;
-}
-
-.site-auth .text {
-  line-height: 1.14;
 }
 
 .icon-mail {
@@ -614,55 +662,6 @@ ul {
 .hero-button:hover, .hero-button:focus {
   color: #212121;
   outline: none;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.flex-type,
-.link-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body {
-  background-color: #ffffff;
-  color: #757575;
-  font-family: Roboto, sans-serif;
-  letter-spacing: 0.03em;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.flex-type .link {
-  display: inline-flexbox;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .advantage .container {
@@ -789,8 +788,7 @@ body {
   margin-bottom: 24px;
 }
 
-.team-card .connect .shell, .connect .team-card .shell,
-.team-card .connect .shell {
+.team-card .shell {
   display: block;
   margin-right: 10px;
 }
@@ -1013,7 +1011,7 @@ body {
   position: relative;
   height: 116px;
   resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 

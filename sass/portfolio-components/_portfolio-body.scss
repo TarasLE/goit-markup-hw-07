@@ -12,7 +12,6 @@
   margin-bottom: 50px;
 
   &.text {
-    @extend %text-style;
     color: $--text-title-color;
     background-color: $--background-icon-color;
     font-weight: 500;
@@ -38,6 +37,7 @@
   padding: 6px 22px;
   border-radius: 4px;
   border: 1px solid transparent;
+
   transition: background-color 250ms $timing-function;
 
   &:hover,
@@ -56,14 +56,12 @@
 
 .features {
   & .text {
-    @extend %text-style;
     color: $--primary-text-color;
     font-size: 16px;
     line-height: 1.87;
   }
 
   & .subtitle {
-    @extend %subtitle-style;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -103,7 +101,6 @@
   }
 
   & .subtitle {
-    @extend %subtitle-style;
     display: block;
     margin-top: 20px;
     margin-bottom: 4px;
@@ -111,7 +108,6 @@
   }
 
   & .text {
-    @extend %text-style;
     display: block;
     margin-top: 0;
     margin-bottom: 20px;
