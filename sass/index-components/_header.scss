@@ -71,8 +71,7 @@
   padding-bottom: 25px;
   transition: color 250ms $timing-function;
 
-  .page-header &:hover,
-  .page-header &:focus {
+  .page-header &:hover {
     color: $--text-accent-color;
   }
 }
@@ -115,7 +114,13 @@
   fill: currentColor;
 }
 
-.link:hover,
-.link:focus {
-  color: $--text-accent-color;
+.link {
+  &:hover,
+  &:focus {
+    color: $--text-accent-color;
+  }
+
+  &:focus .logo {
+    color: $--text-accent-color;
+  }
 }

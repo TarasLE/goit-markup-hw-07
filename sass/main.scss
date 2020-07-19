@@ -1,13 +1,13 @@
-@import "./normalize";
-@import "./variables";
-@import "./utilities/block-charact";
-@import "./utilities/ul";
-@import "./utilities/link";
-@import "./utilities/textStyles";
-@import "./utilities/buttons";
+@import "./utils/normalize";
+@import "./utils/variables";
+@import "./utils/block-charact";
+@import "./utils/ul";
+@import "./utils/link";
+@import "./utils/textStyles";
+@import "./utils/buttons";
 
-@import "./index.html/header";
-@import "./index.html/hero";
-@import "./index.html/body";
-@import "./index.html/footer";
-@import "./portfolio.html/portfolio-body";
+@import "./index-components/header";
+@import "./index-components/hero";
+@import "./index-components/body";
+@import "./index-components/footer";
+@import "./portfolio-components/portfolio-body";
