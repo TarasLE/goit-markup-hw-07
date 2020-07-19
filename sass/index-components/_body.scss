@@ -271,10 +271,6 @@ body {
   height: 90px;
   border: 1px solid $--primary-icon-color;
   border-radius: 4px;
-
-  // transition-property: border;
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms $timing-function;
 
   &:not(:first-child) {
