@@ -214,7 +214,8 @@
   height: 90px;
   border: 1px solid $--primary-icon-color;
   border-radius: 4px;
-  transition: border 250ms $timing-function;
+  transform: scale(1);
+  transition: border 250ms $timing-function, transform 250ms $timing-function;
 
   &:not(:first-child) {
     @extend %card-interim-margin;
@@ -222,16 +223,35 @@
 
   &:hover {
     border: 1px solid $--text-accent-color;
+    transform: scale(1.2);
+    transition: transform 250ms $timing-function;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $--text-accent-color;
+    transform: scale(1.2);
+    transition: transform 250ms $timing-function;
   }
 
   &:hover .logo-1,
+  &:focus .logo-1,
   &:hover .logo-2,
+  &:focus .logo-2,
   &:hover .logo-3,
+  &:focus .logo-3,
   &:hover .logo-4,
+  &:focus .logo-4,
   &:hover .logo-5,
-  &:hover .logo-6 {
+  &:focus .logo-5,
+  &:hover .logo-6,
+  &:focus .logo-6 {
     fill: $--text-accent-color;
   }
+}
+
+.card:not(:first-child) {
+  margin-left: 30px;
 }
 
 //-------------MODAL-BLOCK------------//
