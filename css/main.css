@@ -1146,6 +1146,10 @@ ul {
           justify-content: center;
 }
 
+.accept-button {
+  margin-bottom: 0px;
+}
+
 .accept-button:hover, .accept-button:focus {
   color: #212121;
   outline: none;

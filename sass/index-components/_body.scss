@@ -463,6 +463,7 @@
 
 .accept-button {
   @extend %button-style;
+  margin-bottom: 0px;
 
   &:hover,
   &:focus {
