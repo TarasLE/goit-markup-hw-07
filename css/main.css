@@ -928,6 +928,7 @@ ul {
 
 .modal {
   position: absolute;
+  top: 221px;
   left: 50%;
   -webkit-transform: translate(-50%) scale(1);
           transform: translate(-50%) scale(1);
@@ -1118,12 +1119,14 @@ ul {
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
+  border-radius: 2px;
   margin-right: 8.5px;
   margin-left: 12px;
 }
 
 .checkbox:checked + .icon-checked {
-  border: 2px solid #2196f3;
+  border: 4px solid #2196f3;
+  border-radius: 2px;
   background-color: #2196f3;
   background-image: url("../img/icon_check.svg");
   background-size: contain;

@@ -4,7 +4,7 @@
   margin-top: 94px;
   background-color: $--background-footer;
 
-  & .container {
+  .container {
     text-align: left;
     align-items: baseline;
     background-color: $--background-footer;
@@ -33,7 +33,7 @@
   margin-bottom: 28px;
   margin-right: 69px;
 
-  & .link {
+  .link {
     color: $--footer-link-color;
     font-size: 14px;
     line-height: 1.71;
@@ -42,17 +42,17 @@
     margin-top: 9px;
   }
 
-  & .link:hover,
-  & .link:focus {
+  .link:hover,
+  .link:focus {
     color: $--text-accent-color;
   }
 
-  & .logo {
+  .logo {
     font-size: 26px;
     line-height: 1.18;
   }
 
-  & .logo-colored {
+  .logo-colored {
     font-size: 26px;
     line-height: 1.18;
   }
@@ -61,14 +61,14 @@
 .connect {
   margin-right: 94px;
 
-  & .subtitle {
+  .subtitle {
     color: $--primary-white-color;
     display: block;
     padding: 0;
     margin-top: 0;
   }
 
-  & .social-block {
+  .social-block {
     @extend %social-block-style;
     background-color: $--footer-social-block-color;
   }
@@ -78,12 +78,12 @@
     fill: $--primary-white-color;
   }
 
-  & .social-block:hover,
-  & .social-block:focus {
+  .social-block:hover,
+  .social-block:focus {
     background-color: $--text-accent-color;
   }
 
-  & .flex-type {
+  .flex-type {
     margin-top: 20;
     margin-bottom: 0;
     padding-left: 0;
@@ -114,7 +114,7 @@
   border-radius: 4px;
   padding: 0;
 
-  & .form-input {
+  .form-input {
     width: 100%;
     height: 100%;
     padding-left: 16px;
@@ -127,7 +127,7 @@
     color: var(--primary-white-color);
   }
 
-  & .form-input:focus {
+  .form-input:focus {
     outline: none;
     border: 2px solid $--footer-border-input;
   }

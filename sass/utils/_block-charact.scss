@@ -21,7 +21,7 @@ body {
 .flex-type {
   display: flex;
 
-  & .link {
+  .link {
     display: inline-flexbox;
     justify-content: center;
     align-items: center;
